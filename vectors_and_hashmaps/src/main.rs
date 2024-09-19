@@ -1,6 +1,5 @@
 use std::collections::HashMap;
 
-
 fn main() {
     let mut v1:Vec<i32>=Vec::new();
     v1.push(1);
@@ -56,9 +55,21 @@ fn main() {
             print!("User not found")
     }
 
+    let v=vec![(String::from("rishi"),19),(String::from("krishna"),17)];
+    let mp=group_values(v);
+    print!("{:?}",mp);
 
 
 
+
+}
+
+fn group_values(vec:Vec<(String,i32)>)->HashMap<String,i32>{
+    let mut ans=HashMap::new();
+    for(key,value) in vec{
+        ans.insert(key,value);
+    }
+    return ans;
 }
 
 // fn filter(vec:&Vec<i32>)->Vec<i32>{
